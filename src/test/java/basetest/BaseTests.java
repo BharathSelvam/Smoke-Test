@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import com.altavoz.pages.LoginPage;
+import com.pages.LoginPage;
 
 public class BaseTests {
 	protected WebDriver driver;

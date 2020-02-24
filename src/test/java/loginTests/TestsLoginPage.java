@@ -2,8 +2,10 @@ package loginTests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import com.pages.LoginPage;
+
 import basetest.BaseTests;
-import com.altavoz.pages.LoginPage;
 
 public class TestsLoginPage extends BaseTests {
 	
