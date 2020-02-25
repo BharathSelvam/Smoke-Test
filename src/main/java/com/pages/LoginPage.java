@@ -30,8 +30,9 @@ public class LoginPage {
 		driver.findElement(passwordField).sendKeys(password);
 	}
 
-	public void clickLoginButton() {
+	public StudiesPage clickLoginButton() {
 		driver.findElement(loginButton).click();
+		return new StudiesPage(driver);
 	}
 
 	public boolean isLoginButtonEnabled() {
