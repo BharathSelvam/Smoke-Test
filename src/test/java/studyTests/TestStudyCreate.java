@@ -10,7 +10,7 @@ public class TestStudyCreate extends BaseTests {
 	@Test
 	@Description("Test Study create")
 	public void testStudyCreate() {
-		loginpage.userLogin("bselvam@agatisys.com", "Welcome3#");
+		loginpage.userLogin("", "");
 		CreateStudyPage createstudypage = studiespage.clickStudyCreate();
 		createstudypage.setstudyIDField("SMK_TEST_1");
 		createstudypage.setdescriptionField("SMK_TEST_1");
