@@ -34,6 +34,13 @@ public class LoginPage {
 		driver.findElement(loginButton).click();
 		return new StudiesPage(driver);
 	}
+	
+	public StudiesPage userLogin(String emaiID, String password) {
+		driver.findElement(emailIDField).sendKeys(emaiID);
+		driver.findElement(passwordField).sendKeys(password);
+		driver.findElement(loginButton).click();
+		return new StudiesPage(driver);
+	}
 
 	public boolean isLoginButtonEnabled() {
 		return driver.findElement(loginButton).isEnabled();

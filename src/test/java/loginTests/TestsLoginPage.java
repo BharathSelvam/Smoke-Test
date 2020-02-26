@@ -22,8 +22,6 @@ public class TestsLoginPage extends BaseTests {
 	@Test
 	@Description("Test Login with Valid Login credentials")
 	public void testLoginWithValidCredentials() {
-		loginpage.setEmailID("bselvam@agatisys.com");
-		loginpage.setPassword("Welcome3#");
-		loginpage.clickLoginButton();
+		loginpage.userLogin("bselvam@agatisys.com", "Welcome3#");
 	}
 }
