@@ -9,14 +9,13 @@ public class CreateStudyPage {
 	public CreateStudyPage(WebDriver driver) {
 		this.driver = driver;
 	}
-
 	By studyIDField = By.xpath("//input[@placeholder='ID']");
 	By studyNameField = By.xpath("//input[@placeholder='Name']");
 	By sponsorNameField = By.xpath("//input[@placeholder='Sponsor Name']");
 	By protocolNumberField = By.xpath("//input[@placeholder='Protocol Number']");
 	By therapeuticAreaField = By.xpath("//input[@placeholder='Therapeutic Area']");
-	By protocolTitleField = By.xpath("//input[@placeholder='Protocol Title']");
-	By descriptionField = By.xpath("//input[@placeholder='Description']");
+	By protocolTitleField = By.xpath("//textarea[@placeholder='Protocol Title']");
+	By descriptionField = By.xpath("//textarea[@placeholder='Description']");
 	By clickSaveButton = By.id("createStudySaveButton");
 
 	public void setstudyIDField(String studyID) {

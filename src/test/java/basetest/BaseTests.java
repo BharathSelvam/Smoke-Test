@@ -9,13 +9,11 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import com.pages.LoginPage;
-import com.pages.StudiesPage;
 import com.utilities.ReadProperties;
 
 public class BaseTests {
 	protected WebDriver driver;
 	protected LoginPage loginpage;
-	protected StudiesPage studiespage;
 
 	@BeforeMethod
 	public void initialize() {
