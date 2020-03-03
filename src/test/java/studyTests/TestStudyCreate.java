@@ -13,8 +13,7 @@ public class TestStudyCreate extends BaseTests {
 	@Description("Test Study create")
 	public void testStudyCreate() {
 		StudiesPage studiespage = loginpage.userLogin("bselvam@agatisys.com","Welcome3#");
-		studiespage.clickStudyCreate();
-		CreateStudyPage createstudypage = new CreateStudyPage(driver);
+		CreateStudyPage createstudypage = studiespage.clickStudyCreate();
 		createstudypage.setstudyIDField("SMK_TEST_1");
 		createstudypage.setdescriptionField("SMK_TEST_1");
 		createstudypage.setprotocolNumberField("SMK_TEST_1");
