@@ -1,12 +1,12 @@
 *Framework*
 
-Page Object Model
+Design Pattern Used : Page Object Model
 
-Java
+Programming Language Used : Java
 
-Allure Reports
+Reporting Used : Allure Reports
 
-TestNG
+Test Framework Used - TestNG
 
 Selenium WebDriver
 
