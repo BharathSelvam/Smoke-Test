@@ -30,16 +30,16 @@ public class LoginPage {
 		driver.findElement(passwordField).sendKeys(password);
 	}
 
-	public StudiesPage clickLoginButton() {
+	public OrganizationsPage clickLoginButton() {
 		driver.findElement(loginButton).click();
-		return new StudiesPage(driver);
+		return new OrganizationsPage(driver);
 	}
-	
-	public StudiesPage userLogin(String emaiID, String password) {
+
+	public OrganizationsPage userLogin(String emaiID, String password) {
 		driver.findElement(emailIDField).sendKeys(emaiID);
 		driver.findElement(passwordField).sendKeys(password);
 		driver.findElement(loginButton).click();
-		return new StudiesPage(driver);
+		return new OrganizationsPage(driver);
 	}
 
 	public boolean isLoginButtonEnabled() {

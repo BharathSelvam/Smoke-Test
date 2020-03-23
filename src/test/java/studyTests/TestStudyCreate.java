@@ -3,6 +3,7 @@ package studyTests;
 import org.testng.annotations.Test;
 
 import com.pages.CreateStudyPage;
+import com.pages.OrganizationsPage;
 import com.pages.StudiesPage;
 
 import basetest.BaseTests;
@@ -12,7 +13,8 @@ public class TestStudyCreate extends BaseTests {
 	@Test
 	@Description("Test Study create")
 	public void testStudyCreate() {
-		StudiesPage studiespage = loginpage.userLogin("bselvam@agatisys.com","Welcome3#");
+		OrganizationsPage organizationspage= loginpage.userLogin("bselvam@agatisys.com","Welcome3#");
+		StudiesPage studiespage = organizationspage.clickAltavozLink();
 		CreateStudyPage createstudypage = studiespage.clickStudyCreate();
 		createstudypage.setstudyIDField("SMK_TEST_1");
 		createstudypage.setdescriptionField("SMK_TEST_1");
@@ -22,6 +24,6 @@ public class TestStudyCreate extends BaseTests {
 		createstudypage.setstudyNameField("SMK_TEST_1");
 		createstudypage.settherapeuticAreaField("SMK_TEST_1");
 		createstudypage.clickSaveButton();
-		studiespage.searchStudy("SMK_TEST_1");
+		studiespage.searchStudy("SMK_TEST_1");	
 	}
 }
