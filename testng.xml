@@ -5,6 +5,7 @@
 		<classes>
 			<class name="loginTests.TestsLoginPage" />
 			<class name="studyTests.TestStudyCreate"></class>
+			<class name="roles.TestRoleCreate"></class>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

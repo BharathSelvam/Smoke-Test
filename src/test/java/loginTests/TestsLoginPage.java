@@ -1,7 +1,5 @@
 package loginTests;
 
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -25,8 +23,9 @@ public class TestsLoginPage extends BaseTests {
 	public void testLoginWithValidCredentials() {
 		loginpage.userLogin("bselvam@agatisys.com", "Welcome3#");
 		String pageTitle = driver.getTitle();
-		WebDriverWait wait = new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.titleContains(pageTitle));
+		System.out.println("before test" + driver.getTitle());
+		waitForElementToBeDisplayed(driver, pageTitle);
 		Assert.assertEquals(pageTitle, "IQVIA: Organizations", "Wrong page is displayed");
+		System.out.println("After test" + driver.getTitle());
 	}
 }

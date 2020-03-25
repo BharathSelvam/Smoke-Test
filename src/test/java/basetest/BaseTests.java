@@ -5,6 +5,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import com.pages.LoginPage;
@@ -24,6 +26,11 @@ public class BaseTests {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get(properties.getProperty("URL"));
 		loginpage = new LoginPage(driver);
+	}
+	
+	public static void waitForElementToBeDisplayed(WebDriver driver, String waitElement) {
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.titleContains(waitElement));
 	}
 
 	@AfterMethod
